@@ -50,8 +50,9 @@
       #about div[style*="position:absolute;top:20px;right:0"]{display:none!important;}
       #about div[style*="position:absolute;bottom:0;right:0"]{position:static!important;margin-top:16px!important;border-radius:16px!important;}
       #about div[style*="padding-bottom:28px;padding-right:28px"]{padding-bottom:0!important;padding-right:0!important;}
-      /* Bento cards: min-height so absolute content has room */
-      .bento-grid > div{min-height:280px!important;}
+      /* Switch bento grid to flex column — eliminates all grid-column/grid-row conflicts */
+      .bento-grid{display:flex!important;flex-direction:column!important;gap:16px!important;}
+      .bento-grid > div{min-height:260px!important;}
       /* Exterior card: expand text from left-50% to full width */
       .exterior-text{right:0!important;padding:20px 24px!important;}
       /* Kitchen card: hide Explore button, stack content, shrink heading */
